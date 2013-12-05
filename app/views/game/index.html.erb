@@ -1,0 +1,26 @@
+<div class="center hero-unit">
+  <h1>КРОКО</h1>
+  <img src="http://naklejki-na-avto.ru/images/product/l/86b17e8.png" alt="Крокодильчик!" />
+  <br />
+  <select id="type">
+      <option value = "train">тренировка</option >
+      <option value = "pro">игра</option >
+  </select>
+  <br />
+  <select id="cat">
+    <% @categories.each do |category| %>
+      <option value = <%= category.id %> >
+        <%= category.name %>
+      </option >
+    <% end %>
+  </select>
+  <br />
+  <button id="goButton" class="btn btn-large btn-primary">Стартуем!</button>
+  <p>Скоро тут будет круто и красиво :)</p>
+</div>
+
+<script>
+$( "#goButton" ).click(function() {
+  window.location.href = "http://storms-end-rails-54766.apne1.actionbox.io/game/"+$( "#type" ).val()+":"+$( "#cat" ).val();
+});
+</script>

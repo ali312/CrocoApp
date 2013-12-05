@@ -1,0 +1,26 @@
+<h1>Категории</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Название</th>
+      <th>Кол-во слов</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= category.words.count %></td>
+        <td><%= link_to 'Показать', category %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Добавить категорию', new_category_path %>

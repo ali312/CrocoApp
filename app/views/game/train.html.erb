@@ -1,0 +1,25 @@
+<div class="center hero-unit">
+  <h3 id="hd">ТРЕНИРОВКА</h3>
+  <img src="http://naklejki-na-avto.ru/images/product/l/86b17e8.png" alt="Крокодильчик!" />
+  <br />
+  <h1 id="word">СЛОВО</h1>
+  <br />
+  <button id="goButton" class="btn btn-large btn-primary">Дальше</button>
+  <p>Скоро тут будет круто и красиво :)</p>
+</div>
+
+<script>
+$( "#goButton" ).click(function() {
+  //var n = <%= @cat_id %>
+      //alert( "http://storms-end-rails-54766.apne1.actionbox.io/categories/"+n.toString()+"/rand.json" );
+  //alert((<%= :category_id %>).toString());
+  $.getJSON( "http://storms-end-rails-54766.apne1.actionbox.io/categories/2/rand.json", function( data ) {
+    var items = [];
+    $.each( data, function( key, val ) {
+      if ( key="word") {
+        $("#word").text(val);
+      };
+    });
+  });
+});
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Кроко!</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <ul class="nav pull-right">
+      
+      <li><%=link_to 'На главную', root_url %></li>
+      <li><a href="http://vk.com/sapphire_id">Антоша</a></li>
+      <li><a href="http://vk.com/id96614352">Тёма</a></li>
+      <li><a href="http://vk.com/borodachi_crew">Nakarman Clan</a></li>
+    </ul>
+  </div>
+</header>
+<%= yield %>
+<a href="http://vk.com/sapphire_id">The Light Prj. &copy; 2013</a>
+</body>
+  
+</html>

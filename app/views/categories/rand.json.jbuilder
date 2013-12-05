@@ -1,0 +1,1 @@
+json.extract! @word, :id, :category_id, :word
